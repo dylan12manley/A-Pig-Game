@@ -8,7 +8,39 @@
     <title>Pig Dice Game</title>
   </head>
   <body>
-    <h1>Dice Game</h1>
-    
+    <div class="container">
+      <div class="row">
+        <h1>Dice Game</h1>
+        <form class="diceGame">
+          <button type="submit" class='btn-success' name="newGameBtn">Start New Game</button>
+        </form>
+      </div>
+
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5">
+            <h1>Player 1</h1>
+            <h2>Current Roll <span id='player1Roll'></span></h2>
+            <h4>Current Turn Score <span id='player1TurnScore'></span></h4>
+            <h3>Total Score <span id='player1TotalScore'></span></h3>
+          </div>
+          <div class="col-md-5">
+            <h1>Player 2</h1>
+            <h2>Current Roll <span id='player2Roll'></span></h2>
+            <h4>Current Turn Score <span id='player2TurnScore'></span></h4>
+            <h3>Total Score <span id='player2TotalScore'></span></h3>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+
+        <div class="row">
+          <form class="playButtons">
+            <button type="submit" name="rollBtn">Roll</button>
+            <button type="submit" name="holdBtn">Hold</button>
+          </form>
+        </div>
+    </div>
   </body>
 </html>
