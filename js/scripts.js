@@ -1,16 +1,11 @@
-// function Players(player1, player2) {
-//   this.player1 = player1,
-//   this.player2 = player2
-// }
-//
-// function Player(currentRoll, turnScore, totalScore) {
-//   this.currentRoll = currentRoll,
-//   this.turnScore = turnScore,
-//   this.totalScore = totalScore
-// }
-//
+function Game(player1, player2) {
+  this.player1 = player1,
+  this.player2 = player2
+}
+
 var die = 0;
 var turnScore = 0;
+var totalScore = 0;
 
 function dieRoll() {
 die = Math.floor(Math.random() * 6) + 1;
@@ -24,8 +19,16 @@ function addTurnScore() {
   }
 }
 
+function addTotalScore() {
+  totalScore = totalScore + turnScore;
+  // $("#player2Btns").toggle();
+  // $("#player1Btns").toggle();
+  // return totalScore;
+}
+
 
 $(document).ready(function() {
+
   $('#rollBtn').click(function(event) {
     event.preventDefault();
     dieRoll();
@@ -34,9 +37,10 @@ $(document).ready(function() {
     $('#player1TurnScore').text(turnScore);
     console.log(die);
   })
-  // $('#rollBtn').click(function(event) {
-  //   event.preventDefault();
-  //   var roll = dieRoll();
-  //   $('#player2Roll').text(roll);
-  // })
+  $('#holdBtn').click(function(event) {
+    event.preventDefault();
+    addTotalScore();
+    $('#player1TotalScore').text(totalScore);
+    console.log(totalScore);
+  })
 })

@@ -8,3 +8,9 @@ button#rollBtn {
 button#holdBtn {
   background-color: hsl(0, 55%, 80%);
 }
+#player2Btns{
+  display: none;
+}
+#player1Btns{
+  display: show;
+}
