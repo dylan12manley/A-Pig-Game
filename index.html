@@ -12,7 +12,15 @@
       <div class="row">
         <h1>Dice Game</h1>
         <form class="diceGame">
-          <button type="submit" class='btn-success' name="newGameBtn">Start New Game</button>
+          <div class="form-group">
+            <label for="player1Input">Player One:</label>
+            <input type="text" name="player1Input" id="player1Input">
+          </div>
+          <div class="form-group">
+            <label for="player2Input">Player One:</label>
+            <input type="text" name="player2Input" id="player2Input">
+          </div>
+          <button type="button" class='btn-success' name="newGameBtn" id="start">Start New Game</button>
         </form>
       </div>
 
@@ -44,14 +52,14 @@
               <button type="submit" id="holdBtn">Hold</button>
             </form>
           </div>
-          <div id="player2Btns">
+          <!-- <div id="player2Btns">
             <form class="playButtons">
               <button type="button" id="rollBtn">Roll</button>
               <br>
               <br>
               <button type="submit" id="holdBtn">Hold</button>
             </form>
-          </div>
+          </div> -->
         </div>
     </div>
   </body>
