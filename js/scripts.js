@@ -26,13 +26,6 @@ Player.prototype.addTotalScore = function(){
   return player.totalScore
 }
 
-
-
-// function addTotalScore() {
-//   totalScore = totalScore + turnScore;
-  // $("#player2Btns").toggle();
-  // $("#player1Btns").toggle();
-// }
 var player = new Player(0, 0, 0);
 
 $(document).ready(function() {

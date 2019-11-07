@@ -19,6 +19,7 @@ __
 
 |Specs|Input|Output|
 |-|-|-|
+|User inputs player names|Tom|Tom|
 |User clicks "new game" button to start game|click on "new game"|"Player 1 start"|
 |P1 click on "roll" button|click on "roll"|a number between 2-6|
 |P1 chooses click "hold" button or "roll" button|click on "hold"|total score = 4|
@@ -27,6 +28,18 @@ __
 |P1 turn score is refreshed|click on "roll"|turn score = 0|
 |P2 is prompted to start turn|click on "roll"|"P2 Start!"|
 |P2 total score reaches 100 or more points|click on "roll"|"Play Two Wins"|    
+
+
+## To do
+
+_Add player names HTML_
+_Add player name attributes to player objects
+_Add ID counter to players Objects_
+_If player.Id[1] = 1 then player1 object properties and displays are changed_
+_With Start button create player objects and game object_
+_With Start button, add player1 and player2 objects to the game object_
+_With Start button, add a game counter to game object_
+
 
 ## Known Bugs
 
