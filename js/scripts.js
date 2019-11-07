@@ -9,12 +9,6 @@ function Player(roll, turnScore, totalScore) {
   this.totalScore = totalScore
 }
 
-var thisRoll = 0;
-var thisTurnScore = 0;
-var totalScore = 0;
-
-
-
 Player.prototype.diceRoll = function() {
     this.roll = Math.floor(Math.random() * 6) + 1;
     if (this.roll === 1) {
@@ -22,16 +16,23 @@ Player.prototype.diceRoll = function() {
     } else {
       this.turnScore += this.roll;
   }
-  return ((thisRoll = this.roll), (thisTurnScore = this.turnScore));
+
+  return player.roll, player.turnScore;
+}
+
+Player.prototype.addTotalScore = function(){
+  console.log(player.roll);
+  player.totalScore = (player.roll + player.turnScore);
+  return player.totalScore
 }
 
 
-function addTotalScore() {
-  totalScore = totalScore + turnScore;
+
+// function addTotalScore() {
+//   totalScore = totalScore + turnScore;
   // $("#player2Btns").toggle();
   // $("#player1Btns").toggle();
-  // return totalScore;
-}
+// }
 var player = new Player(0, 0, 0);
 
 $(document).ready(function() {
@@ -46,12 +47,15 @@ $(document).ready(function() {
   $('#rollBtn').click(function(event) {
     var roll = 0;
     player.diceRoll(roll);
-    $('#player1Roll').text(thisRoll);
-    $('#player1TurnScore').text(thisTurnScore);
+    console.log(player.roll, player.turnScore);
+    $('#player1Roll').text(player.roll);
+    $('#player1TurnScore').text(player.turnScore);
   })
-  console.log(player.roll);
   $('#holdBtn').click(function(event) {
-    addTotalScore();
-    $('#player1TotalScore').text(totalScore);
+    event.preventDefault();
+    var totalScore = 0;
+    player.addTotalScore(totalScore);
+    console.log(player.totalScore);
+    $('#player1TotalScore').text(this.totalScore);
   })
 })
