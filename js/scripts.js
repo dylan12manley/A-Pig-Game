@@ -24,7 +24,6 @@ Player.prototype.diceRoll = function() {
     } else {
       this.turnScore += this.roll;
       }
-      console.log(player1.roll, player1.turnScore);
   return [player1.roll, player1.turnScore, player2.roll, player2.turnScore];
 }
 
@@ -33,7 +32,11 @@ Player.prototype.addTotalScore = function(){
     player1.totalScore = (player1.turnScore + player1.totalScore);
     player2.totalScore = (player2.turnScore + player2.totalScore);
     if (this.totalScore >= 20) {
-      alert('Game Over. You Win!')
+      $('#player1Buttons').show();
+      $('#player2Buttons').show();
+      $('#player0Buttons').show();
+      $('#gameOver').fadeIn( 'slow', function() {
+        });
     }
     return [player1.totalScore, player1.turnScore = 0, player2.totalScore, player2.turnScore = 0]
   } else {
@@ -63,13 +66,25 @@ $(document).ready(function() {
       }
       var game = new Game([], [], 0);
     $('#player1Go').show();
+    $('#player1Buttons').show();
+    $('#player0Buttons').hide();
     game.addPlayer(player1);
     game.addPlayer(player2);
     player1.totalScore = 0
     $('#player1TotalScore').text(player1.totalScore);
     player2.totalScore = 0
     $('#player2TotalScore').text(player2.totalScore);
-  })
+    player1.turnScore = 0
+    $('#player1TurnScore').text(player1.turnScore);
+    player2.turnScore = 0
+    $('#player2TurnScore').text(player2.turnScore);
+    player1.roll = 0
+    $('#player1Roll').text(player1.roll);
+    player2.roll = 0
+    $('#player2Roll').text(player2.roll);
+    $('#gameOver').hide();
+    $('#youRolled1').hide();
+  });
 
   $('#player1RollButton').click(function(event) {
     var roll = 0;
@@ -78,9 +93,11 @@ $(document).ready(function() {
       $(this).text(player1.roll).fadeIn();
     });
     if (player1.roll === 1) {
+
       $('#player2Buttons').toggle();
       $('#player1Buttons').toggle();
-      $('#youRolled1').show();
+      $('#youRolled1').fadeIn( 'slow', function() {
+        });
       $('#player1Go').hide();
     } else {
       $('#youRolled1').hide();
@@ -109,7 +126,8 @@ $(document).ready(function() {
     if (player2.roll === 1) {
       $('#player2Buttons').toggle();
       $('#player1Buttons').toggle();
-      $('#youRolled1').show();
+      $('#youRolled1').fadeIn( 'slow', function() {
+        });
       $('#player1Go').hide();
     } else {
       $('#youRolled1').hide();

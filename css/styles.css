@@ -12,15 +12,16 @@ button.holdBtn {
   display: none;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(205,126,18,1) 29%, rgba(213,78,122,1) 54%);
 }
 #player1Buttons {
   display: show;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: rgb(2,0,36);
-  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(205,126,18,1) 29%, rgba(213,78,122,1) 54%);
+}
+#player0Buttons {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #player1Go {
   display: none;
@@ -37,9 +38,11 @@ button.holdBtn {
 #displayBox {
   height: 75px;
   width: 350px;
-  background-color: yellow;
+  background: rgb(128,103,187);
+  background: radial-gradient(circle, rgba(128,103,187,1) 0%, rgba(122,251,162,1) 94%);
   margin: auto;
+  border-radius: 12%;
   border-style: solid;
   border-width: 5px;
-  border-color: black;
+  border-color: grey;
 }
