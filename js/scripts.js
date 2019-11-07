@@ -54,7 +54,9 @@ $(document).ready(function() {
   $('#rollBtn').click(function(event) {
     var roll = 0;
     player.diceRoll(roll);
-    $('#player1Roll').text(player.roll);
+    $('#player1Roll').fadeOut(function() {
+      $(this).text(player.roll).fadeIn();
+    });
     $('#player1TurnScore').text(player.turnScore);
   })
 
