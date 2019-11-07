@@ -100,7 +100,8 @@ $(document).ready(function() {
     if (player2.roll === 1) {
       $('#player2Buttons').toggle();
       $('#player1Buttons').toggle();
-      alert('You rolled a 1! Next player');
+      $('#youRolled1').show();
+      $('#player1Go').hide();
     }
     $('#player2TurnScore').text(player2.turnScore);
   });
