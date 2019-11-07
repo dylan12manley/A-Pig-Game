@@ -1,4 +1,4 @@
-function Game(player1, player2) {
+function Game(player1, player2, currentId) {
   this.player1 = [],
   this.player2 = [],
   this.currentId = 0;
@@ -7,6 +7,11 @@ function Game(player1, player2) {
 Game.prototype.assignGameId = function() {
   this.currentId += 1;
   return this.currentId;
+}
+
+Game.prototype.addPlayer = function(contact) {
+  player.id = this.assignId();   // <--- This line is new!
+  this.contacts.push(contact);
 }
 
 function Player(roll, turnScore, totalScore) {
@@ -22,7 +27,7 @@ Player.prototype.assignPlayerId = function() {
 }
 
 Player.prototype.diceRoll = function() {
-    this.roll = Math.floor(Math.random() * 6) + 1;
+  this.roll = Math.floor(Math.random() * 6) + 1;
     if (this.roll === 1) {
       this.turnScore = 0;
     } else {
@@ -33,12 +38,15 @@ Player.prototype.diceRoll = function() {
 }
 
 Player.prototype.addTotalScore = function(){
-  console.log(player.roll);
-  player.totalScore = (player.roll + player.turnScore);
-  return player.totalScore
+  if (this.roll > 1) {
+    player.totalScore = (player.roll + player.turnScore + player.totalScore);
+    return player.totalScore //Delete This
+  } else {
+    return player.totalScore //Delete This
+    } // add "return" here
 }
 
-var player = new Player(0, 0, 0);
+var player = new Player(0, 0, 0, 0);
 
 $(document).ready(function() {
 
@@ -46,9 +54,18 @@ $(document).ready(function() {
     event.preventDefault();
     var player1Name = $('input#player1Input').val();
     var player2Name = $('input#player2Input').val();
-    var game = new Game(player1Name, player2Name);
+    if (player1Name === "") {
+      $('#player1Name').text("Player 1")
+    } else {
     $('#player1Name').text(player1Name);
-    $('#player2Name').text(player2Name);
+      }
+    if (player1Name === "") {
+      $('#player2Name').text("Player 2")
+    } else {
+      $('#player2Name').text(player2Name);
+      }
+    player.assignPlayerId(player)
+    var game = new Game([], [], 0);
   })
 
   $('#rollBtn').click(function(event) {
@@ -62,10 +79,9 @@ $(document).ready(function() {
 
   $('#holdBtn').click(function(event) {
     event.preventDefault();
-    console.log(player.roll, player.turnScore);
     var totalScore = 0;
     player.addTotalScore(totalScore);
-    console.log(player.totalScore);
+    console.log(player.id);
     $('#player1TotalScore').text(player.totalScore);
   })
 })
