@@ -17,7 +17,7 @@
             <input type="text" name="player1Input" id="player1Input">
           </div>
           <div class="form-group">
-            <label for="player2Input">Player One:</label>
+            <label for="player2Input">Player Two:</label>
             <input type="text" name="player2Input" id="player2Input">
           </div>
           <button type="button" class='btn-success' name="newGameBtn" id="start">Start New Game</button>
@@ -28,13 +28,13 @@
           <div class="col-md-1">
           </div>
           <div class="col-md-5">
-            <h1>Player 1</h1>
+            <h1><span id='player1Name'></span></h1>
             <h2>Current Roll <span id='player1Roll'></span></h2>
             <h4>Current Turn Score <span id='player1TurnScore'></span></h4>
             <h3>Total Score <span id='player1TotalScore'></span></h3>
           </div>
           <div class="col-md-5">
-            <h1>Player 2</h1>
+            <h1><span id='player2Name'></span></h1>
             <h2>Current Roll <span id='player2Roll'></span></h2>
             <h4>Current Turn Score <span id='player2TurnScore'></span></h4>
             <h3>Total Score <span id='player2TotalScore'></span></h3>
@@ -44,23 +44,14 @@
         </div>
 
         <div class="row">
-          <div id="player1Btns">
-            <form class="playButtons">
-              <button type="button" id="rollBtn">Roll</button>
-              <br>
-              <br>
-              <button type="button" id="holdBtn">Hold</button>
-            </form>
-          </div>
-          <!-- <div id="player2Btns">
-            <form class="playButtons">
-              <button type="button" id="rollBtn">Roll</button>
-              <br>
-              <br>
-              <button type="submit" id="holdBtn">Hold</button>
-            </form>
-          </div> -->
+          <form class="playButtons">
+            <button type="button" id="rollBtn">Roll</button>
+            <br>
+            <br>
+            <button type="button" id="holdBtn">Hold</button>
+          </form>
         </div>
+      </div>
     </div>
   </body>
 </html>

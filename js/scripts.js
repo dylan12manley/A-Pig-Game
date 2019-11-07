@@ -29,14 +29,16 @@ Player.prototype.addTotalScore = function(){
 var player = new Player(0, 0, 0);
 
 $(document).ready(function() {
+  
   $('#start').click(function(event) {
     event.preventDefault();
     var player1Name = $('input#player1Input').val();
     var player2Name = $('input#player2Input').val();
     var game = new Game(player1Name, player2Name);
-
-
+    $('#player1Name').text(player1Name);
+    $('#player2Name').text(player2Name);
   })
+
   $('#rollBtn').click(function(event) {
     var roll = 0;
     player.diceRoll(roll);
@@ -44,6 +46,7 @@ $(document).ready(function() {
     $('#player1Roll').text(player.roll);
     $('#player1TurnScore').text(player.turnScore);
   })
+
   $('#holdBtn').click(function(event) {
     event.preventDefault();
     var totalScore = 0;
