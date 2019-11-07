@@ -14,3 +14,16 @@ button.holdBtn {
 #player1Buttons {
   display: show;
 }
+#player1Go {
+  display: none;
+}
+#player2Go {
+  display: none;
+}
+#youRolled1 {
+  display: none;
+}
+#gameOver
+ {
+  display: none;
+}
