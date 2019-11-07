@@ -1,16 +1,16 @@
 body {
   text-align: center;
 }
-button#rollBtn {
+button.rollBtn {
   background-color: #FFDC00;
   border-radius: 50%;
 }
-button#holdBtn {
+button.holdBtn {
   background-color: hsl(0, 55%, 80%);
 }
-/* #player2Btns{
+#player2Buttons {
   display: none;
 }
-#player1Btns{
+#player1Buttons {
   display: show;
-} */
+}
