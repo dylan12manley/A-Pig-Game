@@ -29,7 +29,9 @@ Player1.prototype.diceRoll = function() {
     } else {
       this.turnScore += this.roll;
       }
-  return player1.roll, player1.turnScore;
+      console.log(player1.roll, player1.turnScore);
+  return [player1.roll, player1.turnScore];
+
 }
 
 Player1.prototype.addTotalScore = function(){
@@ -52,7 +54,7 @@ Player2.prototype.diceRoll = function() {
       this.turnScore += this.roll;
   }
 
-  return player2.roll, player2.turnScore;
+  return [player2.roll, player2.turnScore];
 }
 
 Player2.prototype.addTotalScore = function(){
