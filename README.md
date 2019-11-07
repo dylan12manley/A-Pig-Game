@@ -32,8 +32,9 @@ __
 
 ## To do
 
+_Change hold button type to "button"_
 _Add player names HTML_
-_Add player name attributes to player objects
+_Add player name attributes to player objects_
 _Add ID counter to players Objects_
 _If player.Id[1] = 1 then player1 object properties and displays are changed_
 _With Start button create player objects and game object_
@@ -47,7 +48,7 @@ _With Start button, add a game counter to game object_
 ## Support and contact details
 
 _Dylan Manley at dylan.manley@gmail.com_
-_Saul Ordonez at sauleordonez@gmail.com
+_Saul Ordonez at sauleordonez@gmail.com_
 
 ## Technologies Used
 
