@@ -31,12 +31,13 @@ Player.prototype.diceRoll = function() {
 Player.prototype.addTotalScore = function(){
   if (this.roll > 1) {
     player1.totalScore = (player1.turnScore + player1.totalScore);
-    return [player1.totalScore, player1.turnScore = 0, player2.totalScore, player2.turnScore = 0];
-  } else {
+    player2.totalScore = (player2.turnScore + player2.totalScore);
     if (this.totalScore >= 100) {
-      alert('Game Over. You Win!');
+      alert('Game Over. You Win!')
     }
-    return [player1.totalScore, player2.totalScore];
+    return [player1.totalScore, player1.turnScore = 0, player2.totalScore, player2.turnScore = 0]
+  } else {
+    return [player1.totalScore, player2.totalScore]
     }
 }
 
