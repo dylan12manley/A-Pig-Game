@@ -23,19 +23,22 @@
           </div>
           <button type="button" class='btn-success' name="newGameBtn" id="start">Start New Game</button>
         </form>
-        <div class='promptWindow' id='player1Go'>
-          <h4>Player 1 Go!</h4>
-        </div>
-        <div class='promptWindow' id='player2Go'>
-          <h4>Player 2 Go!</h4>
-        </div>
-        <div class='promptWindow' id='youRolled1'>
-          <h4>Uh Oh, You've rolled a 1</h4>
-          <h4>Next player's turn</h4>
-        </div>
-        <div class='promptWindow' id='gameOver'>
-          <h4>You Win!!</h4>
-          <h4>Game Over</h4>
+        <br>
+        <div id="displayBox">
+          <div class='promptWindow' id='player1Go'>
+            <h4>Player 1 Go!</h4>
+          </div>
+          <div class='promptWindow' id='player2Go'>
+            <h4>Player 2 Go!</h4>
+          </div>
+          <div class='promptWindow' id='youRolled1'>
+            <h4>Uh Oh, You've rolled a 1</h4>
+            <h4>Next player's turn</h4>
+          </div>
+          <div class='promptWindow' id='gameOver'>
+            <h4>You Win!!</h4>
+            <h4>Game Over</h4>
+          </div>
         </div>
       </div>
 
@@ -59,18 +62,22 @@
       </div>
 
       <div class="row">
-        <form id='player1Buttons' class="playButtons">
-          <button type="button" class='rollBtn' id="player1RollButton">Roll</button>
-          <br>
-          <br>
-          <button type="button" class='holdBtn' id="player1HoldButton">Hold</button>
-        </form>
-        <form id='player2Buttons' class="playButtons">
-          <button type="button"  class='rollBtn' id="player2RollButton">Roll</button>
-          <br>
-          <br>
-          <button type="button" class='holdBtn' id="player2HoldButton">Hold</button>
-        </form>
+        <div id='player1Buttons'>
+          <form class="playButtons">
+            <button type="button" class='rollBtn' id="player1RollButton">Roll</button>
+            <br>
+            <br>
+            <button type="button" class='holdBtn' id="player1HoldButton">Hold</button>
+          </form>
+        </div>
+        <div id='player2Buttons'>
+          <form class="playButtons">
+            <button type="button"  class='rollBtn' id="player2RollButton">Roll</button>
+            <br>
+            <br>
+            <button type="button" class='holdBtn' id="player2HoldButton">Hold</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
