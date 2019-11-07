@@ -35,7 +35,7 @@ __
 _*did*Change hold button type to "button"_
 _*did*Add player names HTML_
 _*did*Change addTotalScore prototype (add ..+ player.totalScore_)
-_fix bug for when user presses hold after 1 roll_
+_*did*fix bug for when user presses hold after 1 roll_
 _Add player name attributes to Game objects_
 _Add ID counter to players Objects_
 _Add ID counter to games Objects_

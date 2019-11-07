@@ -1,6 +1,6 @@
 function Game(player1, player2) {
   this.player1 = [],
-  this.player2 = []
+  this.player2 = [] 
 }
 
 Game.prototype.addPlayer = function(contact) {
