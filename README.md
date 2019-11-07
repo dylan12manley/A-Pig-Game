@@ -32,9 +32,9 @@ __
 
 ## To do
 
-_Change hold button type to "button"_
-_Add player names HTML_
-_Add player name attributes to player objects_
+_*did*Change hold button type to "button"_
+_*did*Add player names HTML_
+_Add player name attributes to Game objects_
 _Add ID counter to players Objects_
 _If player.Id[1] = 1 then player1 object properties and displays are changed_
 _With Start button create player objects and game object_

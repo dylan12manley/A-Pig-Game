@@ -1,12 +1,24 @@
 function Game(player1, player2) {
-  this.player1 = player1,
-  this.player2 = player2
+  this.player1 = [],
+  this.player2 = [],
+  this.currentId = 0;
+}
+
+Game.prototype.assignGameId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 function Player(roll, turnScore, totalScore) {
   this.roll = roll,
   this.turnScore = turnScore,
   this.totalScore = totalScore
+  this.currentId = 0;
+}
+
+Player.prototype.assignPlayerId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 Player.prototype.diceRoll = function() {
@@ -29,7 +41,7 @@ Player.prototype.addTotalScore = function(){
 var player = new Player(0, 0, 0);
 
 $(document).ready(function() {
-  
+
   $('#start').click(function(event) {
     event.preventDefault();
     var player1Name = $('input#player1Input').val();
@@ -42,16 +54,16 @@ $(document).ready(function() {
   $('#rollBtn').click(function(event) {
     var roll = 0;
     player.diceRoll(roll);
-    console.log(player.roll, player.turnScore);
     $('#player1Roll').text(player.roll);
     $('#player1TurnScore').text(player.turnScore);
   })
 
   $('#holdBtn').click(function(event) {
     event.preventDefault();
+    console.log(player.roll, player.turnScore);
     var totalScore = 0;
     player.addTotalScore(totalScore);
     console.log(player.totalScore);
-    $('#player1TotalScore').text(this.totalScore);
+    $('#player1TotalScore').text(player.totalScore);
   })
 })
