@@ -1,24 +1,18 @@
-function Game(player1, player2, currentId) {
+function Game(player1, player2) {
   this.player1 = [],
-  this.player2 = [],
-  this.currentId = 0;
-}
-
-Game.prototype.assignGameId = function() {
-  this.currentId += 1;
-  return this.currentId;
+  this.player2 = []
 }
 
 Game.prototype.addPlayer = function(contact) {
-  player.id = this.assignId();   // <--- This line is new!
+  player.id = this.assignId();
   this.contacts.push(contact);
 }
 
-function Player(roll, turnScore, totalScore) {
+function Player(roll, turnScore, totalScore, currentId) {
   this.roll = roll,
   this.turnScore = turnScore,
-  this.totalScore = totalScore
-  this.currentId = 0;
+  this.totalScore = totalScore,
+  this.currentId = 0
 }
 
 Player.prototype.assignPlayerId = function() {
@@ -39,11 +33,11 @@ Player.prototype.diceRoll = function() {
 
 Player.prototype.addTotalScore = function(){
   if (this.roll > 1) {
-    player.totalScore = (player.roll + player.turnScore + player.totalScore);
-    return player.totalScore //Delete This
+    player.totalScore = (player.turnScore + player.totalScore);
+    return player.totalScore, player.turnScore = 0
   } else {
-    return player.totalScore //Delete This
-    } // add "return" here
+    return player.totalScore
+    }
 }
 
 var player = new Player(0, 0, 0, 0);
