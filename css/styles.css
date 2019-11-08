@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  background: rgb(78,6,140);
+  background: linear-gradient(270deg, rgba(78,6,140,1) 5%, rgba(210,105,190,1) 11%, rgba(167,47,47,0.9051995798319328) 40%, rgba(252,196,166,1) 50%, rgba(203,123,123,0.9612219887955182) 60%, rgba(242,181,66,1) 89%, rgba(255,71,39,1) 95%);
 }
 button.rollBtn {
   background-color: #FFDC00;
@@ -12,11 +14,15 @@ button.holdBtn {
   display: none;
   padding-top: 15px;
   padding-bottom: 15px;
+  background: rgb(78,6,140);
+  background: linear-gradient(270deg, rgba(78,6,140,1) 5%, rgba(210,105,190,1) 11%, rgba(167,47,47,0.9051995798319328) 44%, rgba(252,196,166,1) 57%, rgba(255,255,255,0.9724264705882353) 68%);
 }
 #player1Buttons {
   display: show;
   padding-top: 15px;
   padding-bottom: 15px;
+  background: rgb(255,54,15);
+  background: linear-gradient(90deg, rgba(255,54,15,1) 0%, rgba(210,188,105,1) 7%, rgba(167,47,47,1) 42%, rgba(255,255,255,0.9724264705882353) 60%);
 }
 #player0Buttons {
   display: none;
