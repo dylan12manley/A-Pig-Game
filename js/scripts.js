@@ -31,7 +31,7 @@ Player.prototype.addTotalScore = function(){
   if (this.roll > 1) {
     player1.totalScore = (player1.turnScore + player1.totalScore);
     player2.totalScore = (player2.turnScore + player2.totalScore);
-    if (this.totalScore >= 20) {
+    if (this.totalScore >= 100) {
       $('#player1Buttons').show();
       $('#player2Buttons').show();
       $('#player0Buttons').show();
